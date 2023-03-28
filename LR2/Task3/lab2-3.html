@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ахунов Нияз</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let promptMessage = "Введите значение x"
+    let x = prompt(promptMessage, "");
+
+    while (!isFinite(x) || x == null || x === "") {
+        x = prompt(promptMessage, "");
+    }
+    x = Number(x);
+    let y;
+
+    if (x <= 0 && x !== -1) {
+        y = Math.pow(Math.exp(1), 2 * x) + x;
+    } 
+    else if (x > 0 && x <= 3.14) {
+        y = Math.pow(Math.cos(x),2);
+    } 
+    else {
+        y = 1 / x;
+    }
+
+
+    document.write(`<p style='text-align:center'><b>Y = </b>${y}</p>`);
+    document.write("<img src='./images/2-3.png'/>");
+</script>
+</body>
+</html>

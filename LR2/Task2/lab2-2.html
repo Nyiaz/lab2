@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ахунов Нияз</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    let promptMessage = "Введите значение x"
+    let x = null;
+    
+    while (!x) {
+        try {
+            x = prompt(promptMessage, "");
+            if (!isFinite(x) || x == null || x === "") {
+                throw new Error("Число не валидно");
+            }
+        } catch (e) {
+            alert(e.message);
+            x = null;
+        }
+    }
+
+    x = Number(x);
+    let y;
+
+    switch (true) {
+        case (x <= 0 && x !== -1):
+            y = Math.pow(Math.exp(1), 2 * x) + x;
+            break;
+        case Math.pow(Math.cos(x),2):
+            y = м;
+            break;
+        default:
+            y = 1 / x;
+            break;
+    }
+
+
+    document.write(`<p style='text-align:center'><b>Y = </b>${y}</p>`);
+    document.write("<img src='./images/2-3.png'/>");
+</script>
+</body>
+</html>
